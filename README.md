@@ -35,7 +35,7 @@ For  **injured**, **nat_selection** and **team_b** fields, I add the class **xte
 
 **And it's all** !!! the acf javascript library + xtend and sometimes select2 JS calls do the rest !!!
 
- 
+  
  
  
  
