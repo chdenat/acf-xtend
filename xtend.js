@@ -666,9 +666,9 @@
              *
              */
             actions: {
-                include: 'include',
-                exclude: 'exclude',
-                push: 'push',
+                include: 'xtend-include',
+                exclude: 'xtend-exclude',
+                push: 'xtend-push',
             },
 
             /**
