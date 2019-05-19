@@ -21,7 +21,7 @@
         /**
          * Check if there are some items  that are useable by xtend
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @returns {boolean}
          */
@@ -56,7 +56,7 @@
         /**
          *  Get Field Group : return  a Group field plus all children
          *
-         *  since : 0.1
+         *  @since 0.1
          *
          * @param arg (jQuery element or group field key
          *
@@ -100,7 +100,7 @@
         /**
          * Return all Filed Groups in the page
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param args : can be a key or empty
          */
@@ -131,7 +131,7 @@
         /**
          * Returns the full key according to the hierarchy (in repeater)
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param field
          * @returns {*}
@@ -143,7 +143,7 @@
         /**
          * getFields wrapper, used to get fields by fkey.
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param args
          * @returns {Array}
@@ -178,7 +178,7 @@
         /**
          * Create a new model
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param name : Model name. If not defined let's use cid as name.
          * @returns {acf.Model|acf.Model}
@@ -200,7 +200,7 @@
                     /**
                      * push content to a container
                      *
-                     * Since : 0.1
+                     * @since 0.1
                      *
                      * @param event
                      * @param $el
@@ -217,7 +217,7 @@
                     /**
                      * Include content from a container
                      *
-                     * Since : 0.1
+                     * @since 0.1
                      *
                      * @param event
                      * @param $el
@@ -232,7 +232,7 @@
                     /**
                      * Exclude from a container
                      *
-                     * Since : 0.1
+                     * @since 0.1
                      *
                      * @param event
                      * @param $el
@@ -246,7 +246,7 @@
                     /**
                      * ACF filter : used to modify the selection list, according to actions and containers
                      *
-                     * Since : 0.1
+                     * @since 0.1
                      *
                      * @param json
                      * @param params
@@ -383,7 +383,7 @@
          *
          * If no name is given, take acf cid
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param model
          * @param name
@@ -400,7 +400,7 @@
         /**
          * Get model name
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param model
          * @returns {*}
@@ -414,7 +414,7 @@
         /**
          * Used to retrieve the repeater format
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param field
          * @returns {*}
@@ -428,7 +428,7 @@
         /**
          * Set children and full key for any element (recursive)
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param object
          * @param parent
@@ -499,7 +499,7 @@
         /**
          * Adds ajx results filter
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param model
          * @param filter
@@ -515,7 +515,7 @@
         /**
          * Remove a specific field
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param $el
          */
@@ -528,7 +528,7 @@
         /**
          * Add a specific field
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param $el
          */
@@ -541,7 +541,7 @@
         /**
          * Initialisation of xtend environment
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param modelName
          * @returns {null|*|acf.Model}
@@ -575,7 +575,7 @@
         /**
          * Set a group field
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param group
          * @param model
@@ -595,7 +595,7 @@
          *
          * If a value is used in an include set, we can not remove it from the push set.
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param event
          */
@@ -646,14 +646,14 @@
         /**
          * settings
          *
-         * Since : 0.1
+         * @since 0.1
          *
          */
         settings: {
             /**
              * Take doublon into account (true) or not when reading containers content (default : no)
              *
-             * Since : 0.1
+             * @since 0.1
              *
              */
             doublon: false,
@@ -662,7 +662,7 @@
              *
              * ACF xtend actions
              *
-             * Since : 0.1
+             * @since 0.1
              *
              */
             actions: {
@@ -674,7 +674,7 @@
             /**
              * classes to detect action when managing containers
              *
-             * Since : 0.1
+             * @since 0.1
              *
              */
             classes: {
@@ -688,7 +688,7 @@
         /**
          * List of containers
          *
-         * Since : 0.1
+         * @since 0.1
          *
          */
 
@@ -697,7 +697,7 @@
         /**
          * Initializes container that have a push action declared
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param field
          * @param action
@@ -723,7 +723,7 @@
         /**
          * add : alias of set
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param field
          */
@@ -737,7 +737,7 @@
          *
          * Returns all values from containers attached to the field.
          *
-         * Since : 0.1
+         * @since 0.1
          **
          * @param field
          * @returns {Array}
@@ -793,7 +793,7 @@
         /**
          * Container initialisation
          *
-         * Since : 0.1
+         * @since 0.1
          **
          * @param field
          */
@@ -849,7 +849,7 @@
     /******************************************************************
      * ACF xtend Tools
      *
-     * Since : 0.1
+     * @since 0.1
      *
      */
     acf.xtend.tools = {
@@ -858,7 +858,7 @@
          * This function compare the content of the Select2 List managed by the user  and the Select content (managed by select2 or ACF)
          * and make synchronisation (when we remove a value, the select options are now sync.
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param field : field
          */
@@ -895,7 +895,7 @@
         /**
          * Retrieve the label of a field
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param field
          * @returns {*}
@@ -908,7 +908,7 @@
         /**
          * Retrieve the action assicated to a specific class
          *
-         * Since : 0.1
+         * @since 0.1
          *
          * @param classe
          * @returns {string}
@@ -922,7 +922,7 @@
     /**
      * Array diff utility
      *
-     * Since : 0.1
+     * @since 0.1
      *
      * @param a
      * @returns {Array|*[]}
