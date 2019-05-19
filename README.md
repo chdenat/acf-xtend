@@ -8,9 +8,9 @@ With acf-xtend, we can manage ACF Field groups, field hierarchy and direct acces
 
 We create containers attached to some fields (a container contains the field content) and, on other fields it is possible to select only data from a container or all other that are not in a container.
 
-##The Use case 
+##The Use case## 
 
-###Genesis
+###Genesis###
 Originally, I developed this tool to manage a pro soccer team season week after week. 
 
 We have a Player CPT used to manage all players in player group: Player A, Player B, Player C ... Player N
@@ -28,7 +28,7 @@ So I have a container some fields :
  In **injured**, **nat_selection** and **team_b** fields, I can add players that are not in **18_group**, but only once (an injured player cannot play .. in national selection nor in team_B ...).
  In **11_team**, all the players I'll select must be in **18_group**
  
-###How can I do that ?
+###How can I do that ?###
 
 My **18_group** field is the reference and I attach the container ***group*** by adding a class **xtend-push_group**.
 For  **injured**, **nat_selection** and **team_b** fields, I add the class **xtend-exclude-group** and for the 11_team, i just add **xtend-include-groupe**. 
