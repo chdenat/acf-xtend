@@ -38,15 +38,11 @@ Use this code or similar to use xtend.
 
 add_action( 'acf/input/admin_enqueue_scripts', 'acf_xtend_enqueue_scripts' );
 function acf_xtend_enqueue_scripts() {
-	global $xtend_actions;
-
-
 	$xtend_classes=[
 		'push'=> 'push',
 		'include' => 'pull',
 		'exclude'=> 'notin'
 	];
-
 	wp_register_script( 'acf-extend-js', esc_url( plugins_url( '/acf-xtend/xtend.js', __FILE__ )), false, false, true );
 	wp_enqueue_script( 'acf-extend-js' );
 	wp_localize_script( 'acf-extend-js', 'acf_xtend_classes', $xtend_classes );
