@@ -8,7 +8,7 @@ With acf-xtend, we can manage ACF Field groups, field hierarchy and direct acces
 
 We create containers attached to some fields (a container contains the field content) and, on other fields it is possible to select only data from a container or all other that are not in a container.
 
-##T he Use case
+##The Use case
 
 ### Genesis
 Originally, I developed this tool to manage a pro soccer team season week after week. 
@@ -29,6 +29,30 @@ So I have a container some fields :
  In **11_team**, all the players I'll select must be in **18_group**
  
 ### How can I do that ?
+
+## PHP code ##
+
+Use this code or similar to use xtend.  
+
+...
+
+add_action( 'acf/input/admin_enqueue_scripts', 'acf_xtend_enqueue_scripts' );
+function acf_xtend_enqueue_scripts() {
+	global $xtend_actions;
+
+
+	$xtend_classes=[
+		'push'=> 'push',
+		'include' => 'pull',
+		'exclude'=> 'notin'
+	];
+
+	wp_register_script( 'acf-extend-js', esc_url( plugins_url( '/acf-xtend/xtend.js', __FILE__ )), false, false, true );
+	wp_enqueue_script( 'acf-extend-js' );
+	wp_localize_script( 'acf-extend-js', 'acf_xtend_classes', $xtend_classes );
+}
+
+...
 
 My **18_group** field is the reference and I attach the container ***group*** by adding a class **xtend-push_group**.
 For  **injured**, **nat_selection** and **team_b** fields, I add the class **xtend-exclude-group** and for the 11_team, i just add **xtend-include-groupe**. 
