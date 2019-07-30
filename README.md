@@ -30,28 +30,38 @@ So I have a container some fields :
  
 ### How can I do that ?
 
-## PHP code ##
+The idea behind is to manage field virtual containers where xtend push or pull fields keys. Those fields are settable through ACF field additionnal classes.
 
-Use this code or similar to use xtend.  
 
-...
+**PHP code**
 
-add_action( 'acf/input/admin_enqueue_scripts', 'acf_xtend_enqueue_scripts' );
-function acf_xtend_enqueue_scripts() {
-	$xtend_classes=[
-		'push'=> 'push',
-		'include' => 'pull',
-		'exclude'=> 'notin'
-	];
-	wp_register_script( 'acf-extend-js', esc_url( plugins_url( '/acf-xtend/xtend.js', __FILE__ )), false, false, true );
-	wp_enqueue_script( 'acf-extend-js' );
-	wp_localize_script( 'acf-extend-js', 'acf_xtend_classes', $xtend_classes );
-}
+/!\ **It works only with post fields ... !!!!**
 
-...
+Use this code or similar to use xtend in your post/page or Custom post typ admin pages.  
 
-My **18_group** field is the reference and I attach the container ***group*** by adding a class **xtend-push_group**.
-For  **injured**, **nat_selection** and **team_b** fields, I add the class **xtend-exclude-group** and for the 11_team, i just add **xtend-include-groupe**. 
+    add_action( 'acf/input/admin_enqueue_scripts', 'acf_xtend_enqueue_scripts' );
+    function acf_xtend_enqueue_scripts() {
+        $xtend_classes=[
+            'push'=> 'push',
+            'include' => 'pull',
+            'exclude'=> 'notin'
+        ];
+        wp_register_script( 'acf-extend-js', esc_url( plugins_url( '/acf-xtend/xtend.js', __FILE__ )), false, false, true );
+        wp_enqueue_script( 'acf-extend-js' );
+        wp_localize_script( 'acf-extend-js', 'acf_xtend_classes', $xtend_classes );
+    }
+
+**Settings in ACF**
+
+In the ACF field definition and settings, you should add some custom classes to use **xtend containers**.
+
+For a container named `mycontainer`
+
+- If you want to push a post field content to a container :  add the class `push_mycontainer`
+- If you want to restrict choices of a post field content to a container :  add the class `pull_mycontainer`
+- If you want to retricts choice of values that are not in a container :  add the class `notin_mycontainer`
+Of course you can mix classes to get choices from a container and push it in  another container : `push_newcontainer pull_mycontainer`
+
 
 **And it's all** !!! the acf javascript library + xtend and sometimes select2 JS calls do the rest !!!
 
