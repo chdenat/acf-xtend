@@ -59,9 +59,10 @@ For a container named `mycontainer`
 
 - If you want to push a post field content to a container :  add the class `push_mycontainer`
 - If you want to restrict choices of a post field content to a container :  add the class `pull_mycontainer`
-- If you want to retricts choice of values that are not in a container :  add the class `notin_mycontainer`
+- If you want to retricts choices for some values that are not in a container :  add the class `notin_mycontainer`
 Of course you can mix classes to get choices from a container and push it in  another container : `push_newcontainer pull_mycontainer`
 
+Class names prefixes can be changed through PHP code above if you already use such classname.
 
 **And it's all** !!! the acf javascript library + xtend and sometimes select2 JS calls do the rest !!!
 
