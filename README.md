@@ -49,6 +49,11 @@ Use this code or similar to use xtend in your post/page or Custom post typ admin
         wp_register_script( 'acf-extend-js', esc_url( plugins_url( '/acf-xtend/xtend.js', __FILE__ )), false, false, true );
         wp_enqueue_script( 'acf-extend-js' );
         wp_localize_script( 'acf-extend-js', 'acf_xtend_classes', $xtend_classes );
+        
+        // You need also another js file, here it is "acf-admin-utils.js" where you put all your JS code related to acf 
+        
+        wp_register_script( 'acf-admin-utils-js', $directory . '../assets/js/acf-admin-utils.js', false, false, true );
+	       wp_enqueue_script( 'acf-admin-utils-js' );
     }
 
 **Settings in ACF**
@@ -63,6 +68,13 @@ For a container named `mycontainer`
 Of course you can mix classes to get choices from a container and push it in  another container : `push_newcontainer pull_mycontainer`
 
 Class names prefixes can be changed through PHP code above if you already use such classname.
+
+**Settings in JavaScript**
+
+In the "acf-admin-utils.js" (or any js file you enqueued) , add 
+       
+           acf.xtend.initialize('any-name');
+where *any-name* is an acf model name (you can reuse one you created to manage acf data or use any word/string.
 
 **And it's all** !!! the acf javascript library + xtend and sometimes select2 JS calls do the rest !!!
 
