@@ -4,7 +4,7 @@
      *
      * ACF xtend
      *
-     * Version : 0.5.1
+     * Version : 0.5.2
      * Author : christian.denat@orange.fr
      *
      * Based on ACF and Select2 APIs
