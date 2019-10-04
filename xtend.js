@@ -150,8 +150,8 @@
          */
         getFields: (args) => {
             // vars
-            var selector = '.acf-field';
-            var $fields = false;
+            let selector = '.acf-field';
+            let $fields = false;
 
             // args
             args = acf.parseArgs(args, {
@@ -666,9 +666,9 @@
              *
              */
             actions: {
-                include: 'xtend-include',
-                exclude: 'xtend-exclude',
-                push: 'xtend-push',
+                include: 'include',
+                exclude: 'exclude',
+                push: 'push',
             },
 
             /**
@@ -682,6 +682,7 @@
                 push: acf_xtend_classes.push,
                 exclude: acf_xtend_classes.exclude,
             },
+
 
         },
 
@@ -807,6 +808,7 @@
                     field.forEach((f) => {
                         acf.xtend.containers.initialize(f, model);
                     });
+
                 } else if (field.get('children').length > 0) {
                     field.get('children').forEach((f) => {
                         acf.xtend.containers.initialize(f, model);
@@ -934,4 +936,3 @@
     };
 
 })(jQuery);
-;
